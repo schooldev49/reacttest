@@ -1,0 +1,16 @@
+{
+    "1": [
+       {
+        "name": "Your first project",
+        "icon": "N/A",
+        "creator": "Template"
+       } 
+    ],
+    "2": [
+        {
+         "name": "Your second project",
+         "icon": "N/A",
+         "creator": "Template"
+        } 
+     ]
+}
