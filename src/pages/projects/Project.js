@@ -24,7 +24,7 @@ export const Project = (props) => {
 
 projectImg = projectImg ? projectImg : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Circle_%28transparent%29.png/768px-Circle_%28transparent%29.png'
     return <>
-         <div className='project' id={projectUrl} onClick={(e) => {
+         <a className='project' id={projectUrl} href={projectUrl} onClick={(e) => {
                             console.log(e.target.id)
                         }}>
                         <img className='projectImg' src={projectImg}/>   
@@ -35,6 +35,6 @@ projectImg = projectImg ? projectImg : 'https://upload.wikimedia.org/wikipedia/c
                           {projectDesc}
                         </p>
                         
-            </div>
+            </a>
     </>
 }

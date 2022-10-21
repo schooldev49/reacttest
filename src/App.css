@@ -92,7 +92,43 @@ code {
 .skillsContent {
   padding: 0;margin: 0;
 }
-.skillsContainer {
+.blogTile {
+  background-color: rgb(54 48 48 / 50%);
+  margin-top: 1vw;
+  padding: 5px;
+  padding-top: 10px;
+  margin-bottom: 1vw;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.textDeco {
+  text-decoration: underline;
+}
+.blogImg1 {
+  height: 7vw;
+  width: 7vw;
+  margin: 0;
+}
+.blogDate {
+  font-size: x-large;
+  margin: 0;
+}
+.blogTitle {
+  font-size: xx-large;
+  margin: 0;
+}
+
+
+.blogTile:hover {
+  transform: scale(1.02);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.container {
   font-weight: 50;color: white;font-size: 4vw;padding: 20px;text-shadow: 0 0 5px #000;
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     background: rgb(0 0 0 / 20%);
@@ -100,6 +136,13 @@ code {
     width: 75%;
 
     border-radius: 10px;
+}
+.blogContain{
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1 1;
 }
 .skillsHolder {
   display: flex; 

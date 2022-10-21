@@ -1,9 +1,52 @@
 import React, {useState} from 'react'
 //import fs from 'fs'
-import { Blogs } from './posts/blogs'
-import {useParams, Navigate} from 'react-router-dom'
+import Blogs from './posts/blogs'
+import {useParams, Navigate, useNavigate} from 'react-router-dom'
+import {Navbar} from '../../components/nav/Navbar'
+import { NavbarItem } from '../../components/nav/NavbarItem'
 //import listReactFiles from 'list-react-files'
+const BlogPost = () => {
+    let use = useParams();
+    console.log(use.postId,use.postName)
+    let id = use.postId
+    var bloge;
+    Promise.all(Blogs.map((blog) => {
+        if (blog.id == id){
+           bloge = blog; 
+        } 
+    }))
 
+    return (
+        <>
+        
+            <div className='App'>
+            
+                <Navbar/>
+                <div className='container'>
+                    {
+                    bloge && bloge.title && bloge.content ? ( 
+                        <><h1>{bloge.title}</h1><p>{bloge.content}</p></>
+                    ) : (
+                        <Navigate to='/blog/' replace/>
+                    )
+                    }
+                </div>
+            </div>
+        </>
+    )
+}
+export default BlogPost;
+
+
+
+
+
+
+
+
+
+//import listReactFiles from 'list-react-files'
+/*
 const getFile = (file) => {
     //const fileq = []
 //  listReactFiles(__dirname).then(files => fileq = files)
@@ -29,4 +72,4 @@ export const BlogPost = () => {
            }
         </>
     )
-}
+}*/

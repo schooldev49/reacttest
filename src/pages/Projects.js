@@ -31,7 +31,7 @@ export const Projects = () => {
         <div>
           
            
-                <div className="skillsContainer">
+                <div className="container">
                 <p className='skillsText' style={{fontSize: '3vw'}}>
                         Projects
                     </p>

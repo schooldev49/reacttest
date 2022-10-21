@@ -4,7 +4,7 @@ export const NavbarItem = (props) => {
    return (
     <>
 
-        {props.id == 'active' ? (
+        {props.id && props.id == 'active' ? (
             <Link className='navLink' id='active' to={props.link} key={props.key}>{props.children}</Link>
 
         ) : (

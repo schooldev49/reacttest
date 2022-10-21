@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
+import {useTest} from '../hooks/test/useTest'
 import { AlphabetTest } from '../components/test/AlphabetTest'
 import { PersonClass } from '../components/test/PersonTest2';
 import { Person } from '../components/test/PersonTest1'
@@ -29,7 +30,7 @@ const programmingLanguages = [
 export const Home = () => {
     const thename = "John";
     const trueorfalse = false;
-  
+    console.log(useTest(4,3))
     return (
       <div className="App">
         <Navbar/>
@@ -42,7 +43,7 @@ export const Home = () => {
         </div>
         <div style={{display: 'flex', flexFlow: 'row'}}>
             <div style={{float: 'left', width: '50vw'}}>
-                <div className="skillsContainer" style={{height: '45vw'}}>
+                <div className="container" style={{height: '45vw'}}>
                     <div style={{textAlign: 'center', display: 'inline-block', height: '100%', margin: 0, verticalAlign: 'middle'}}>
                     <img style={{padding: '10px', width: '75%', verticalAlign: 'middle', transform: 'translateY(9vw)'}} src="https://skillicons.dev/icons?i=powershell,js,html,css,cpp,cs,c,nodejs,linux,nextjs,java,react,cloudflare,dotnet,git,github,lua,netlify,rust,blender,mysql,docker,regex,php,py,ts,vscode,visualstudio,wasm,ps&perline=5">
 
@@ -52,7 +53,7 @@ export const Home = () => {
                 </div>
             </div>
             <div style={{float: 'right', width: '75vw'}}>
-                <div className="skillsContainer" style={{height: '45vw'}}>
+                <div className="container" style={{height: '45vw'}}>
                     <p className='skillsText' style={{fontSize: '3vw'}}>
                         About Me
                     </p>

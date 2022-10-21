@@ -21,7 +21,7 @@ import { Projects } from './pages/Projects'
 import { Resources } from './pages/Resources'
 import { Blog } from './pages/blog/Blog'
 import { NotFound } from './pages/NotFound'
-import { BlogPost } from './pages/blog/BlogPost'
+import BlogPost from './pages/blog/BlogPost'
 const App = () => { 
   return (
     <BrowserRouter>
@@ -31,7 +31,7 @@ const App = () => {
           <Route path='/projects/' element={<Projects/>}/>
           <Route path='/resources/' element={<Resources/>}/>
           <Route path='/blog/' element={<Blog/>}/>
-          <Route path='/blog/:postId/:postName' element={<BlogPost/>}/>
+          <Route path='/blog/:postId/' element={<BlogPost/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Route>
       </Routes>

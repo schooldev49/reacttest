@@ -40,8 +40,8 @@ export const Navbar = () => {
                 <ul className='holderNavs'>
                     {
                       sections.map((item, index) => {
-                        
-                        if (item.url == window.location.href) {
+                        //console.log(window.location.origin.slice(0,-1) + item.url)
+                        if (window.location.origin + item.url == window.location.href) {
                             return (
                                 <>
                                 <NavbarItem link={item.url} key={index} id='active'>{item.title}</NavbarItem>

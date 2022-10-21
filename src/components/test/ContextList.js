@@ -1,13 +1,14 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState, useId} from 'react'
 
 const ExampleContext = React.createContext();
-const ListItemObj = (id, name) => {
+const ListItemObj = (props) => {
+    const {id, name} = props
     const neededStuff = useContext(ExampleContext)
-
+    console.log(neededStuff)
     return (
         <div className='item' key={id}>
             <h2>{name}</h2>
-            <button onClick={() => neededStuff.remove(id)}>Remove</button>
+            <button onClick={() => neededStuff.remove.removeItem(id)}>Remove</button>
         </div>
     )
 }
@@ -20,27 +21,40 @@ const ContextList = (props) => {
         })
     }
     const addList = (name, id) => {
-        console.log(list)
-        console.log(...list)
+      
 
-
-        setList({
-            name: name,
+        setList([
+                ...list, 
+            {
+                name: name,
             id: id
-        })
-        console.log(list)
+            }
+            
+        ])
         
     }
+    const getRandom = () => {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength = characters.length;
+       for (let i=1; i<10; i++){
+        result += characters.charAt(Math.floor(Math.random() * 
+      charactersLength));
+       }
+        
+        return result;
+      }
     return (
         
         <ExampleContext.Provider value={{remove: {removeItem}, list: list}}>
-            <button onClick={() => addList('hi')}></button>
+            <button onClick={() => addList('Example',getRandom())}>add</button>
 
             {
                 list.map((listIt, index) => {
                     const name = listIt.name 
+                    const id1 = listIt.id
                     return (
-                        <ListItemObj name={name} id={index} remove={removeItem}/>
+                        <ListItemObj name={name} id={id1} remove={removeItem}/>
                     )
                 })
             }
