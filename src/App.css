@@ -105,6 +105,9 @@ code {
 .textDeco {
   text-decoration: underline;
 }
+.nomargin {
+  margin: 0;
+}
 .blogImg1 {
   height: 7vw;
   width: 7vw;

@@ -5,6 +5,11 @@ const AllProjects = [
       projectUrl: 'https://genow.cf'
    },
    {
+      projectName: 'Competitive Programming',
+      projectDesc: 'Some programming',
+      projectUrl: 'https://github.com/schooldev49/CompetivieProgramming'
+   },
+   {
       projectName: 'Nebula',
       projectDesc: 'A web proxy designed to circumvent spyware and filtering systems that I helped make',
       projectUrl: 'https://school-district.cloud/',
