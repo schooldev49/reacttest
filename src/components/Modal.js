@@ -6,7 +6,7 @@ export const Modal = (props) => {
         setTimeout(() => {
             props.closeModal()
         },4000)
-    })
+    })  
     return (
         <>
             <div className="modal">

@@ -25,7 +25,7 @@ const BlogPost = () => {
                 <div className='container'>
                     {
                     bloge && bloge.title && bloge.content ? ( 
-                        <><h2 className="nomargin">{bloge.title}</h2><img src={bloge.image} style={{margin: '5px', height: '15vw', width: '15vw'}}/><p className="nomargin">{bloge.content}</p></>
+                        <><h2 className="nomargin">{bloge.title}</h2><img src={bloge.image} style={{margin: '5px', height: '15vw', width: '15vw'}}/><p className="nomargin" dangerouslySetInnerHTML={{__html: bloge.content}}></p></>
                     ) : (
                         <Navigate to='/blog/' replace/>
                     )

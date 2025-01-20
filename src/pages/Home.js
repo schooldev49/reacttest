@@ -41,7 +41,7 @@ export const Home = () => {
           </div>
           <img className='mainImage' src={img}/>
         </div>
-        <div style={{display: 'flex', flexFlow: 'row'}}>
+        <div style={{display: 'flex', flexFlow: 'row', marginBottom: '1em'}}>
             <div style={{float: 'left', width: '50vw'}}>
                 <div className="container" style={{height: '45vw'}}>
                     <div style={{textAlign: 'center', display: 'inline-block', height: '100%', margin: 0, verticalAlign: 'middle'}}>
@@ -66,6 +66,14 @@ export const Home = () => {
                 </div>  
             </div>
         </div>
+        <div><div className="container"><p className="skillsText" style={{fontSize: '3vw', display: 'flex', flexDirection: "column"}}>Interests<button style={{transform: 'none', border: 'none', opacity: 1, background: 'none'}} class="navLink">v</button>
+</p><div className="skillsHolder" style={{display: "none"}}>
+<ul>
+<li>
+swim
+</li>
+</ul>
+</div></div></div>
         <p>ignore everything below this point (learning React)</p>
         <ContextList/>
         <h1>hello, {trueorfalse ? thename : 'Guest'}</h1>
